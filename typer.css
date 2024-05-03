@@ -1,0 +1,427 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap");
+
+:root {
+  --bgColor: #333;
+  --textPrimary: #fff;
+  --textSecondary: #666;
+  --primaryColor: #fd4;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #988a8d;
+  color: var(--textPrimary);
+  font-size: 1.4rem;
+  margin-top: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* min-height: 100vh; */
+  background-color: #161623;
+  /* overflow: hidden; */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(30% at right 70%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+}
+
+main {
+  width: 1500px;
+  margin: 15px auto;
+  position: relative;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1200px; */
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+h1 {
+  color: white;
+  align-items: center;
+  display: inline-flex;
+  /* padding-left: 10px; */
+}
+
+h1 svg {
+  width: 50px;
+  /* padding-left: 50px; */
+  margin-right: 10px;
+  /* padding-top: 15px; */
+  fill: white;
+}
+
+#header {
+  display: grid;
+  height: 50px;
+  /* padding-bottom: 20px; */
+  justify-items: center;
+  /* margin-bottom: 150px; */
+  margin-top: 0;
+  padding-top: 0;
+  outline: none;
+
+  position: absolute;
+  top: 50px;
+  width: 100%;
+
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 400;
+  font-weight: 600;
+}
+
+#info {
+  font-size: 3rem;
+  color: whitesmoke;
+  margin-bottom: 150px;
+}
+
+#buttons {
+  padding: 0;
+  position: absolute;
+  top: 430px;
+  /* margin-bottom: 50px; */
+}
+
+#game-container {
+  display: grid;
+  justify-items: center;
+  margin: 80px;
+  outline: none;
+}
+
+/* margin-top: 60px; */
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 0;
+  outline: none;
+
+  position: relative;
+  width: 1400px;
+  height: 550px;
+
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(5px);
+}
+
+#game {
+  line-height: 35px;
+  margin: 0;
+  padding: 0;
+  height: 270px;
+  overflow: hidden;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  padding-top: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  /* margin-top: 15px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accPopup,
+.wpmPopup {
+  /* margin-bottom: 20px; */
+  flex: 1;
+  margin: 0 10px;
+}
+
+.accPopup h1,
+.wpmPopup h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  margin: 5px 0;
+}
+
+.accPopup h1 p,
+.wpmPopup h1 p {
+  font-size: 2.8em; /* Adjust the font size as needed */
+  font-weight: bold; /* Optionally, you can make the text bold */
+  margin: 20px 0;
+}
+
+.accPopup h1 span,
+.wpmPopup h1 span {
+  padding-top: 58px;
+  font-size: 10; /* Adjust the font size as needed */
+}
+
+#buttons1 {
+  margin-top: -55px; /* Adjust the margin-top value as needed to move the buttons section up */
+}
+
+.popup {
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  margin: 15px auto;
+  position: relative;
+  display: flex;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(20px);
+  /* max-width: 1200px; */
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.popup button {
+  color: whitesmoke;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#newGameBtn {
+  background-color: transparent;
+  border: none;
+  /* padding: 0; */
+  cursor: pointer;
+  justify-self: center; /* Center horizontally */
+  /* margin-top: 20px;  */
+}
+
+#newGameBtnPopup {
+  background-color: transparent;
+  border: none;
+  /* margin: 0;
+    padding: 0; */
+  cursor: pointer;
+  justify-self: center;
+}
+
+#newGameBtn i {
+  font-size: 27px;
+}
+
+#newGameBtnPopup i {
+  font-size: 27px;
+}
+
+/* Rest of your CSS styles remain unchanged */
+
+button {
+  background: rgba(155, 123, 236, 0.2); /*rgba(255, 255, 255, 0.2)*/
+  border: 0;
+  /* color: rgba(255, 255, 255, 0.5); rgba(255, 255, 255, 0.5) */
+  color: whitesmoke;
+  padding: 20px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  text-align: left;
+
+  /* width: 80px; */
+  /* height: 100px; */
+
+  align-items: center;
+  /* top:90px; */
+  /* fill: black; */
+}
+
+div#game {
+  line-height: 60px;
+  height: 125px;
+  overflow: hidden;
+  position: relative;
+}
+div#game:focus {
+  outline: 0;
+}
+#words {
+  filter: blur(5px);
+  font-size: 3.5rem;
+  color: whitesmoke;
+}
+#game:focus #words {
+  filter: blur(0);
+}
+#focus-error {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding-top: 35px;
+}
+
+#focus-error i {
+  margin-right: 5px;
+}
+
+#focus-error span {
+  margin-top: 50px;
+}
+
+#game:focus #focus-error {
+  display: none;
+}
+
+div.word {
+  display: inline-block;
+  font-family: "Roboto Mono", monospace;
+  margin: 0 5px;
+}
+
+.letter.correct {
+  color: rgb(149, 115, 149);
+}
+
+.letter.incorrect {
+  color: black;
+}
+
+/* #cursor{
+      display:none;
+      width: 2px;
+      height: 1.6rem;
+      background: var(--primaryColor);
+      position:fixed;
+      top: 198px;
+      left: 18px;
+      animation: blink .3s infinite;
+  } */
+
+#cursor {
+  display: block;
+  width: 2px;
+  height: 2.65rem;
+  background: var(--primaryColor);
+  position: fixed;
+}
+
+#game:focus #cursor {
+  display: block;
+}
+
+#game.over #words {
+  opacity: 0.5;
+  filter: blur(0px);
+}
+
+#game.over:focus #cursor {
+  display: none;
+}
+
+#game.over #focus-error {
+  display: none;
+}
+
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    /* border-radius: 50%; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 0 20px;
+  }
+
+  #game-container {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .popup {
+    border-radius: 15px;
+    width: 85%;
+    max-width: 615px;
+  }
+
+  .accPopup h1 p,
+  .wpmPopup h1 p {
+    font-size: 2em; /* Adjust the font size as needed */
+  }
+
+  .accPopup h1 span,
+  .wpmPopup h1 span {
+    padding-top: 32px;
+  }
+
+  #words {
+    font-size: 2.5rem;
+  }
+}
+
